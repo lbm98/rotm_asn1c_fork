@@ -63,7 +63,9 @@ NativeInteger_random_fill(const asn_TYPE_descriptor_t *td, void **sptr,
                 0, sizeof(variants) / sizeof(variants[0]) - 1)];
         }
 
-        if(!constraints) constraints = &td->encoding_constraints;
+        if(!constraints || !constraints->per_constraints)
+            constraints = &td->encoding_constraints;
+
 #if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
         const asn_per_constraints_t *ct;
 
