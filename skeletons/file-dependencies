@@ -242,6 +242,11 @@ constr_SEQUENCE.h constr_SEQUENCE_rfill.c
 constr_SET_OF.h constr_SET_OF_rfill.c
 constr_SET.h constr_SET_rfill.c
 
+RMUT:			# THIS IS A SPECIAL SECTION
+asn_random_mut.h
+asn_random_mut.h asn_random_mut.c
+constr_SEQUENCE.h constr_SEQUENCE_rmut.c
+
 CODEC-JER:			# THIS IS A SPECIAL SECTION
 jer_support.h
 jer_decoder.h

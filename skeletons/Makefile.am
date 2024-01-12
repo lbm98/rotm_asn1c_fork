@@ -71,6 +71,7 @@ libasn1cskeletons_la_SOURCES =                  \
     asn_internal.h asn_internal.c               \
     asn_bit_data.c asn_bit_data.h               \
     asn_random_fill.c asn_random_fill.h         \
+    asn_random_mut.c asn_random_mut.h           \
     ber_decoder.c ber_decoder.h                 \
     ber_tlv_length.c ber_tlv_length.h           \
     ber_tlv_tag.c ber_tlv_tag.h                 \
@@ -224,6 +225,7 @@ libasn1cskeletons_la_SOURCES =                  \
     constr_SEQUENCE_ber.c                       \
     constr_SEQUENCE_print.c                     \
     constr_SEQUENCE_rfill.c                     \
+    constr_SEQUENCE_rmut.c                      \
     constr_SEQUENCE_uper.c                      \
     constr_SEQUENCE_xer.c                       \
     constr_SEQUENCE_jer.c                       \
