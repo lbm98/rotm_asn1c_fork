@@ -1,10 +1,11 @@
-#include <BIT_STRING.h>
 #include <assert.h>
 
+#include <NativeInteger.h>
+
 void
-BIT_STRING_random_mut(const asn_TYPE_descriptor_t *td, void **sptr,
-                      const asn_encoding_constraints_t *constraints,
-                      size_t max_length) {
+NativeInteger_random_mut(const asn_TYPE_descriptor_t *td, void **sptr,
+                          const asn_encoding_constraints_t *constraints,
+                          size_t max_length) {
 
     /*
      * Operate on existing data
@@ -12,9 +13,8 @@ BIT_STRING_random_mut(const asn_TYPE_descriptor_t *td, void **sptr,
 
     assert(sptr != NULL);
     assert(*sptr != NULL);
-    assert(td->specifics != NULL);
 
-    BIT_STRING_t *st = (BIT_STRING_t *)*sptr;
+    long *st = *sptr;
 
 #if defined(ASN_DISABLE_UPER_SUPPORT) && defined(ASN_DISABLE_APER_SUPPORT)
 #error "random_mut requires PER mode"
@@ -35,12 +35,14 @@ BIT_STRING_random_mut(const asn_TYPE_descriptor_t *td, void **sptr,
     assert(constraints->per_constraints != NULL);
 
     /*
-     * BIT_STRING uses the size constraints
+     * NativeInteger uses the value constraints
      */
 
-    size_t bit_to_flip = asn_random_between(0, st->size * 8 - st->bits_unused);
-    size_t byte_in_buf = bit_to_flip / 8;
-    size_t bit_in_byte = bit_to_flip % 8;
+    const asn_per_constraint_t *pc = &constraints->per_constraints->value;
 
-    st->buf[byte_in_buf] ^= (1 << bit_in_byte);
+    /*
+     * Perform mutation
+     */
+
+    *st = asn_random_between(pc->lower_bound, pc->upper_bound);
 }

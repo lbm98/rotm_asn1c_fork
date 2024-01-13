@@ -65,6 +65,8 @@ per_type_encoder_f NativeInteger_encode_aper;
 asn_random_fill_f NativeInteger_random_fill;
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
 
+asn_random_mut_f NativeInteger_random_mut;
+
 #ifdef __cplusplus
 }
 #endif

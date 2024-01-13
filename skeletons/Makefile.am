@@ -160,6 +160,7 @@ libasn1cskeletons_la_SOURCES =                  \
     NativeInteger_ber.c                         \
     NativeInteger_print.c                       \
     NativeInteger_rfill.c                       \
+    NativeInteger_rmut.c                        \
     NativeInteger_uper.c                        \
     NativeInteger_xer.c                         \
     NativeInteger_jer.c                         \

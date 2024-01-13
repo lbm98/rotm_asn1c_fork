@@ -65,6 +65,8 @@ per_type_encoder_f NativeEnumerated_encode_aper;
 #define NativeEnumerated_random_fill NativeInteger_random_fill
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
 
+#define NativeEnumerated_random_mut NativeInteger_random_mut
+
 #if !defined(ASN_DISABLE_UPER_SUPPORT) || !defined(ASN_DISABLE_APER_SUPPORT)
 int NativeEnumerated__compar_value2enum(
         const void *ap,

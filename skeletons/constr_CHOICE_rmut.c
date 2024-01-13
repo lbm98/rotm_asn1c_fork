@@ -4,11 +4,6 @@
 void
 CHOICE_random_mut(const asn_TYPE_descriptor_t *td, void **sptr,
                   const asn_encoding_constraints_t *constr, size_t max_length) {
-    /*
-     * Debugging
-     */
-
-//    printf("CHOICE (%s:%d)\n", __FILE__, __LINE__);
 
     /*
      * Operate on existing data

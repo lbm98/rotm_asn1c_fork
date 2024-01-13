@@ -245,6 +245,7 @@ constr_SET.h constr_SET_rfill.c
 RMUT:			# THIS IS A SPECIAL SECTION
 asn_random_mut.h
 asn_random_mut.h asn_random_mut.c
+NativeInteger.h NativeInteger_rmut.c
 constr_CHOICE.h constr_CHOICE_rmut.c
 BIT_STRING.h BIT_STRING_rmut.c
 constr_SEQUENCE.h constr_SEQUENCE_rmut.c
