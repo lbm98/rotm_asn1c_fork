@@ -87,6 +87,8 @@ per_type_encoder_f SEQUENCE_encode_aper;
 asn_random_fill_f SEQUENCE_random_fill;
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
 
+asn_random_mut_f SEQUENCE_random_mut;
+
 extern asn_TYPE_operation_t asn_OP_SEQUENCE;
 
 #ifdef __cplusplus

@@ -71,6 +71,9 @@ asn_TYPE_operation_t asn_OP_BIT_STRING = {
 #else
     0,
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
+
+    BIT_STRING_random_mut,
+
     0  /* Use generic outmost tag fetcher */
 };
 asn_TYPE_descriptor_t asn_DEF_BIT_STRING = {

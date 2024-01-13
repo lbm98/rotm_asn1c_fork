@@ -67,6 +67,8 @@ per_type_encoder_f BIT_STRING_encode_uper;
 asn_random_fill_f BIT_STRING_random_fill;
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
 
+asn_random_mut_f BIT_STRING_random_mut;
+
 const BIT_STRING_t *BIT_STRING__compactify(const BIT_STRING_t *st, BIT_STRING_t *tmp);
 
 #ifdef __cplusplus

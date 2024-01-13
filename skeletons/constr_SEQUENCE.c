@@ -61,6 +61,9 @@ asn_TYPE_operation_t asn_OP_SEQUENCE = {
 #else
     0,
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
+
+    SEQUENCE_random_mut,
+
     0  /* Use generic outmost tag fetcher */
 };
 

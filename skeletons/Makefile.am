@@ -114,6 +114,7 @@ libasn1cskeletons_la_SOURCES =                  \
     ANY_jer.c                                   \
     BIT_STRING_print.c                          \
     BIT_STRING_rfill.c                          \
+    BIT_STRING_rmut.c                           \
     BIT_STRING_uper.c                           \
     BIT_STRING_xer.c                            \
     BIT_STRING_jer.c                            \
@@ -213,6 +214,7 @@ libasn1cskeletons_la_SOURCES =                  \
     constr_CHOICE_ber.c                         \
     constr_CHOICE_print.c                       \
     constr_CHOICE_rfill.c                       \
+    constr_CHOICE_rmut.c                        \
     constr_CHOICE_uper.c                        \
     constr_CHOICE_xer.c                         \
     constr_CHOICE_jer.c                         \

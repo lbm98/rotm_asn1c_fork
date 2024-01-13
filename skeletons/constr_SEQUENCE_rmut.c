@@ -1,6 +1,5 @@
 #include <assert.h>
 
-#include <asn_internal.h>
 #include <constr_SEQUENCE.h>
 
 void
@@ -8,15 +7,16 @@ SEQUENCE_random_mut(const asn_TYPE_descriptor_t *td, void **sptr,
                     const asn_encoding_constraints_t *constr,
                     size_t max_length) {
 
-    printf("(%s:%d)\n", __FILE__, __LINE__);
+//    printf("SEQUENCE (%s:%d)\n", __FILE__, __LINE__);
 
-    if(!sptr) {
-        printf("!sptr (%s:%d)\n", __FILE__, __LINE__);
-        return;
-    }
+//    if(!sptr) {
+//        printf("!sptr (%s:%d)\n", __FILE__, __LINE__);
+//        return;
+//    }
 
+    assert(sptr != NULL);
+    assert(*sptr != NULL);
     void *st = *sptr;
-    assert(st != NULL);
 
     for(size_t edx = 0; edx < td->elements_count; edx++) {
         const asn_TYPE_member_t *elm = &td->elements[edx];

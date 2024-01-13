@@ -60,6 +60,9 @@ asn_TYPE_operation_t asn_OP_CHOICE = {
 #else
     0,
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
+
+    CHOICE_random_mut,
+
     CHOICE_outmost_tag
 };
 

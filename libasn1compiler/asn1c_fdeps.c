@@ -147,7 +147,10 @@ asn1c_read_file_dependencies(arg_t *arg, const char *datadir) {
 				} else if((arg->flags & A1C_GEN_RFILL)
 					  && strcmp(p, "RFILL:") == 0) {
                     activate = 0;
-					section = FDEP_RFILL;
+                    section = FDEP_RFILL;
+                } else if(strcmp(p, "RMUT:") == 0) {
+                    activate = 0;
+                    section = FDEP_RMUT;
 				} else {
 					section = FDEP_IGNORE;
                     activate = 0;

@@ -82,6 +82,8 @@ per_type_encoder_f CHOICE_encode_aper;
 asn_random_fill_f CHOICE_random_fill;
 #endif  /* !defined(ASN_DISABLE_RFILL_SUPPORT) */
 
+asn_random_mut_f CHOICE_random_mut;
+
 asn_outmost_tag_f CHOICE_outmost_tag;
 
 extern asn_TYPE_operation_t asn_OP_CHOICE;
